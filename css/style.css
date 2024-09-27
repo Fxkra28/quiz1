@@ -1,0 +1,579 @@
+/* #### navbar #### */
+.navbar{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background: var(--steelblue);
+    width: 100%;
+}
+.brand-and-toggler{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.navbar-brand{
+    text-transform: uppercase;
+    font-family: var(--poppins);
+    font-size: 1.7rem;
+    font-weight: 800;
+    color :#f7f7f7;
+}
+.navbar-toggler{
+    border: none;
+    font-size: 1.7rem;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition);
+}
+.navbar-toggler:hover{
+    opacity: 0.8;
+}
+.navbar-collapse{
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.nav-item{
+    text-align: center;
+    padding: 0.6rem;
+    position: relative;
+}
+.nav-item::after{
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    width: 0;
+    height: 2px;
+    background: var(--wheat);
+    transition: var(--transition);
+}
+.nav-item:hover::after{
+    width: 100px;
+}
+.nav-link{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+.nav-link:hover{
+    color: var(--wheat);
+}
+.nav-active .nav-link{
+    color: var(--wheat);
+}
+
+/*** show nav class ***/
+.showNav{
+    height: 385px;
+}
+
+/* #### index PAGE #### */
+.index{
+    padding: 5rem 0 2.5rem 0;
+}
+.index .row > div{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--steelblue);
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+.index .row-left{
+    text-align: center;
+}
+.index .row-left h3{
+    color: var(--wheat);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.index .row-left h1{
+    font-size: 2rem;
+    font-family: var(--poppins);
+    text-transform: capitalize;
+    line-height: 1.2;
+    font-weight: 900;
+}
+.index .row-left h1 span{
+    color: var(--wheat);
+}
+.index .row-left h2{
+    text-transform: uppercase;
+    font-family: var(--poppins);
+    font-size: 1rem;
+}
+.index-pg-btn {
+    display: flex;
+    margin: 0.3rem 0;
+    justify-content: center;
+}
+
+.index-pg-btn button {
+    padding: 1rem 1.5rem; /* Further shorten button width */
+    margin-right: 0.5rem;
+    border: 1px solid #f7f7f7;
+    border-radius: 20px; /* Increase border radius for a rounded look */
+    width: auto; /* Auto width to shrink the button around its content */
+    background-color: var(--wheat); /* Ensure consistent wheat background */
+    color: #000; /* Ensure text color is black */
+}
+
+.index-pg-btn button:first-child {
+    border-color: var(--wheat);
+}
+
+.index-pg-btn button:nth-child(2){
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff; /* Add border color to the last button */
+}
+
+.index-pg-btn button:last-child {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff; /* Add border color to the last button */
+}
+
+.index-pg-btn button:hover {
+    opacity: 0.8; /* Add a hover effect for better interaction */
+}
+
+.index .img-container{
+    position: relative;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.index .img-border{
+    background: var(--steelblue);
+    width: 245px;
+    height: 245px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #### profile PAGE #### */
+.profile{
+    padding: 5rem 0 2.5rem 0;
+}
+.profile .row-right{
+    padding: 3rem 0;
+}
+.profile .row-right p{
+    margin: 1rem 0;
+}
+.profile-content{
+    margin: 1.5rem 0;
+}
+.profile-content li{
+    display: flex;
+    margin: 0.6rem 0;
+}
+.profile-content li span{
+    flex: 1;
+}
+.profile-content li span:first-child{
+    color: #fff;
+    font-weight: 600;
+}
+.profile .row-right h3{
+    color: var(--wheat);
+    font-size: 1.5rem;
+}
+.profile .row-right h3 span{
+    color: #fff;
+    font-weight: 400;
+}
+
+/* #### Hometown PAGE #### */
+.hometown{
+    padding: 5rem 0 2.5rem 0;
+}
+.hometown .row-right{
+    padding: 3rem 0;
+}
+.hometown .row-right p{
+    margin: 1rem 0;
+}
+.hometown-content{
+    margin: 1.5rem 0;
+}
+.hometown-content li{
+    display: flex;
+    margin: 0.6rem 0;
+}
+.hometown-content li span{
+    flex: 1;
+}
+.hometown-content li span:first-child{
+    color: #fff;
+    font-weight: 600;
+}
+.hometown .row-right h3{
+    color: var(--wheat);
+    font-size: 1.5rem;
+}
+.hometown .row-right h3 span{
+    color: #fff;
+    font-weight: 400;
+}
+
+/* #### food PAGE #### */
+.food{
+    padding: 5rem 0 2.5rem 0;
+}
+.food > .text{
+    width: 70%;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+.food .item{
+    margin: 2rem 0;
+    height: 320px;
+    width: 100%;
+    position: relative;
+}
+.food .row .item:nth-child(1){
+    background: url(../assets/lontong-balap.jpg) center/cover no-repeat;
+}
+.food .row .item:nth-child(2){
+    background: url(../assets/pecel-semanggi.jpeg) center/cover no-repeat;
+}
+.food .row .item:nth-child(3){
+    background: url(../assets/rujak-cingur.jpg) center/cover no-repeat;
+}
+.food .row .item:nth-child(4){
+    background: url(../assets/sate-karak.jpg) center/cover no-repeat;
+}
+.food .row .item:nth-child(5){
+    background: url(../assets/tahu-campur.jpg) center/cover no-repeat;
+}
+.food .row .item:nth-child(6){
+    background: url(../assets/sate-klopo.jpg) center/cover no-repeat;
+}
+.food .item .item-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--wheat);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: var(--transition);
+}
+.food .item .item-overlay a{
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: var(--poppins);
+}
+.food .item .item-overlay h3{
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+.food .item:hover .item-overlay{
+    opacity: 0.9;
+}
+
+
+/* #### tourist PAGE #### */
+.tourist{
+    padding: 5rem 0 2.5rem 0;
+}
+.tourist > .text{
+    width: 70%;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+.tourist .item{
+    margin: 2rem 0;
+    height: 320px;
+    width: 100%;
+    position: relative;
+}
+.tourist .row .item:nth-child(1){
+    background: url(../assets/hutan-mangrove.jpg) center/cover no-repeat;
+}
+.tourist .row .item:nth-child(2){
+    background: url(../assets/kapal-selam.jpg) center/cover no-repeat;
+}
+.tourist .row .item:nth-child(3){
+    background: url(../assets/tugu-pahlawan.jpg) center/cover no-repeat;
+}
+.tourist .row .item:nth-child(4){
+    background: url(../assets/surabaya-zoo.jpg) center/cover no-repeat;
+}
+.tourist .row .item:nth-child(5){
+    background: url(../assets/masjid-akbar.jpg) center/cover no-repeat;
+}
+.tourist .row .item:nth-child(6){
+    background: url(../assets/alun-alun-surabaya.jpeg) center/cover no-repeat;
+}
+.tourist .item .item-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--wheat);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: var(--transition);
+}
+.tourist .item .item-overlay a{
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: var(--poppins);
+}
+.tourist .item .item-overlay h3{
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+.tourist .item:hover .item-overlay{
+    opacity: 0.9;
+}
+
+
+/* #### footer #### */
+.footer{
+    padding: 2.5rem 0;
+    border-top: 1.5px solid #252525;
+}
+.footer-title{
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    font-family: var(--poppins);
+    font-weight: 700;
+}
+.footer-text .text{
+    text-align: center;
+}
+
+/* #### Media Queries #### */
+@media screen and (min-width: 500px){
+    /* index page */
+    .index .row-left h1{
+        font-size: 4rem;
+    }
+    .index .row-left h2{
+        font-size: 1.4rem;
+    }
+    .index-pg-btn button {
+        padding: 0.4rem 0.4rem; /* Adjust padding for larger screens */
+    }
+    .index .img-container{
+        width: 320px;
+        height: 320px;
+    }
+    .index .img-border{
+        width: 325px;
+        height: 325px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    /* footer */
+    .footer .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* profile page */
+    .profile .row-left{
+        width: 400px;
+        height: 400px;
+        margin: 1rem auto;
+        overflow: hidden;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .hometown .row-left{
+        width: 400px;
+        height: 400px;
+        margin: 1rem auto;
+        overflow: hidden;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    /* food page */
+    .food .row{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+    .food .row .item{
+        margin: 0;
+    }
+    .food .row .item:nth-child(2){
+        grid-column: 2/4;
+    }
+    .food .row .item:nth-child(3){
+        grid-column: 1/3;
+    }
+    .food .row .item:nth-child(6){
+        grid-column: 2/4;
+    }
+
+    .food .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+
+
+    /* tourist page */
+    .tourist .row{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+    }
+    .tourist .row .item{
+        margin: 0;
+    }
+    .tourist .row .item:nth-child(2){
+        grid-column: 2/4;
+    }
+    .tourist .row .item:nth-child(3){
+        grid-column: 1/3;
+    }
+    .tourist .row .item:nth-child(6){
+        grid-column: 2/4;
+    }
+
+    /* tourist page */
+    .tourist .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    /* navbar section */
+    .navbar-toggler{
+        display: none;
+    }
+    .navbar .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar-nav{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .navbar-collapse{
+        height: 100%;
+        flex: 1 0 auto;
+    }
+    .brand-and-toggler{
+        flex: 0 0 100px;
+    }
+    .nav-item{
+        margin: 0 0.5rem;
+    }
+    .nav-link{
+        font-size: 1rem;
+    }
+
+    /* index page */
+    .index .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+    .index .row > div{
+        height: calc(100vh - 73px);
+        border: none;
+        margin: 0;
+        align-items: flex-start;
+    }
+    .index .row-left{
+        text-align: left;
+    }
+    .index .img-container{
+        width: 100%;
+        height: 100%;
+        border-radius: unset;
+    }
+    .index .img-border{
+        height: 90%;
+        width: 100%;
+        transition: var(--transition);
+        border-radius: unset;
+        background: transparent;
+    }
+    .index .img-border:hover{
+        transform: translateY(-14px);
+    }
+
+    /* profile page */
+    .profile .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        grid-gap: 2rem;
+    }
+
+    /* hometown page */
+    .hometown .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        grid-gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    /* footer */
+    .footer .row{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .footer .row .col{
+        text-align: left;
+    }
+    .footer .col:first-child .text{
+        margin: 0;
+    }
+    .social-links{
+        justify-content: flex-start;
+    }
+    .footer-links a .fas{
+        display: inline-block;
+    }
+
+    /* food page */
+    .food .row{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* tourist page */
+    .tourist .row{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
